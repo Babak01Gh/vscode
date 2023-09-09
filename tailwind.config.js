@@ -4,6 +4,9 @@ module.exports = {
       "./src/js/*.js"
   ],
     theme: {
+      fontFamily: {
+        sans: ['firaCode'],
+      },
       extend: {},
     },
     plugins: [],

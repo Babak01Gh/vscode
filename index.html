@@ -1,70 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>vsCode</title>
     <link rel="stylesheet" href="./build/main.css">
 </head>
-<body>
-    <main class="p-4 flex items-stretch justify-stretch bg-[--back-black] h-screen">
-        <div class="flex flex-col z-[2] w-full h-full rounded-lg border border-[--secondary-navy] relative bg-[--primary-navy]">
-            <svg class="absolute w-full h-full -z-[2]" xmlns="http://www.w3.org/2000/svg" width="375" height="593" viewBox="0 0 375 593" fill="none">
-                <g opacity="0.4" filter="url(#filter0_f_56_2418)">
-                  <path d="M266.255 221.259L275.554 344.793L256.282 403.843L160.292 418.975L119.585 328.299L54.5936 350.132L-9.3357 251.04L-14.9998 175.796L141.863 174.153L181.58 236.668L266.255 221.259Z" fill="#43D9AD"/>
-                </g>
-                <defs>
-                  <filter id="filter0_f_56_2418" x="-189" y="0.152924" width="638.554" height="592.822" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                    <feGaussianBlur stdDeviation="87" result="effect1_foregroundBlur_56_2418"/>
-                  </filter>
-                </defs>
-            </svg>
-            <svg class="absolute w-full h-full -z-[2]" xmlns="http://www.w3.org/2000/svg" width="375" height="609" viewBox="0 0 375 609" fill="none">
-                <g opacity="0.4" filter="url(#filter0_f_56_2417)">
-                  <path d="M294.68 446.455L174.223 417.518L123.899 381.106L138.857 285.09L237.639 274.072L236.733 205.517L350.631 174.966L424.001 192.591L377.58 342.436L305.912 361.126L294.68 446.455Z" fill="#4D5BCE"/>
-                </g>
-                <defs>
-                  <filter id="filter0_f_56_2417" x="-50.1006" y="0.965652" width="648.102" height="619.489" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                    <feGaussianBlur stdDeviation="87" result="effect1_foregroundBlur_56_2417"/>
-                  </filter>
-                </defs>
-            </svg>
-            <!-- header navbar -->
-            <nav class="p-4 flex items-center justify-between border-b border-[--secondary-navy]">
-                <span class=" text-base font-normal text-[--secondary-purple]">
-                    Owl script
-                </span>
-                <span class="cursor-pointer" x-data="{isMenuOpen : false}" @click="isMenuOpen = !isMenuOpen">
-                    <svg x-show="!isMenuOpen" class="fill-[--secondary-purple]" xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none">
-                        <path d="M0 0H18V2H0V0ZM0 7H18V9H0V7ZM0 14H18V16H0V14Z"/>
-                    </svg>
-                    <svg x-show="isMenuOpen" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                        <path d="M8 6.2225L14.2225 0L16 1.7775L9.7775 8L16 14.2225L14.2225 16L8 9.7775L1.7775 16L0 14.2225L6.2225 8L0 1.7775L1.7775 0L8 6.2225Z" fill="#607B96"/>
-                    </svg>
-                </span>
-            </nav>
-            <div class="px-6 flex flex-col justify-around flex-1">
-                <div class="flex flex-col text-[--secondary-white] font-normal gap-2">
-                    <span class="text-lg">hi all. I am</span>
-                    <span class="text-6xl">Name Family</span>
-                    <span class="text-lg text-[--main-green]">> frontend developer</span>
-                </div>
-                <div class="flex flex-col font-normal gap-2">
-                    <span class="text-sm text-[--secondary-purple]">// find my profile on Github:</span>
-                    <p class="text-sm text-[--secondary-white]">
-                        <span class="text-[--primary-purple]">const</span> <span class="text-[--main-green]">githubLink</span> = 
-                        <a class="text-[--main-pink]" href="#">"https://github.com/example/url"</a>
-                    </p>
-                </div>
+
+<body class="bg-primary-navy p-5">
+
+    <div class="main-container   border border-secondary-navy rounded-t-lg lg:rounded-lg">
+        <!-- Menu/Logo Container -->
+        <nav class="flex items-center h-10 py-6  lg:py-0  font-bold text-secondary-purple justify-between ">
+            <!-- Logo -->
+            <h3 class="text-secondary-purple mx-4 lg:mx-8  divide-x lg:hidden">Owl script</h3>
+            <!-- Menu -->
+            <div class="hidden h-10 font-alata md:flex items-center justify-between  md:space-x-8 w-full ">
+                <ul class="flex justify-center items-center">
+                    <h3 class="text-secondary-purple mx-8 mr-16  divide-x">Owl script</h3>
+                    <li
+                        class="border border-secondary-navy pt-2  px-8   h-10 text-white  border-b-3 border-b-light-orange">
+                        <a href="">_hello</a>
+                    </li>
+                    <li class="border border-secondary-navy pt-2  px-8   h-10"><a href="">_about-me</a></li>
+                    <li class="border border-secondary-navy pt-2  px-8   h-10"><a href="">_projects</a></li>
+                </ul>
+                <a class="border border-secondary-navy pt-2  px-8   h-10 mr-0">_contact-me</a>
+
+            </div>
+            <!-- Hamburger Button -->
+            <div class="md:hidden">
+                <button id="menu-btn" type="button"
+                    class="z-40 block hamburger cursor-pointer w-6 h-6 transition-all duration-75 relative mt-[10px] right-3  md:hidden focus:outline-none">
+                    <span
+                        class="hamburger-top absolute w-6 h-[2px] top-0 right-0   bg-secondary-purple transition-all duration-300 rotate-0 "></span>
+                    <span
+                        class="hamburger-middle absolute w-6 h-[2px] top-0 right-0   bg-secondary-purple transition-all duration-300 rotate-0  translate-y-7p"></span>
+                    <span
+                        class="hamburger-bottom absolute w-6 h-[2px] top-0 right-0   bg-secondary-purple transition-all duration-300 rotate-0 translate-y-14p"></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="menu"
+            class="absolute top-[7.5%] left-[5%] bottom-0 rounded-b-lg  border border-secondary-navy  w-[90%] max-h-screen  hidden flex-col self-end z-10   text-white  bg-primary-navy">
+            <a href="#" class=" border border-secondary-navy  py-3 pl-3 ">_hello</a>
+            <a href="#" class=" border border-secondary-navy  py-3 pl-3 ">_about-me</a>
+            <a href="#" class=" border border-secondary-navy  py-3 pl-3 ">_projects</a>
+            <a href="#" class=" border border-secondary-navy  py-3 pl-3 ">_contact-me</a>
+
+            <section class="socialmedia mt-auto grid  grid-cols-8 border border-secondary-navy ">
+                <p class="col-span-5 text-secondary-purple pl-4 self-center">find me in:</p>
+                <ul class="flex items-center col-span-3 justify-end">
+                    <li class="col-span-1 px-3 border border-secondary-navy py-3 ">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="Frame" clip-path="url(#clip0_2802_785)">
+                                <path id="Vector"
+                                    d="M22.383 6.15593C21.6196 6.49362 20.81 6.7154 19.981 6.81393C20.8548 6.29136 21.5087 5.46894 21.821 4.49993C21.001 4.98793 20.102 5.32993 19.165 5.51493C18.5356 4.84151 17.7014 4.39489 16.792 4.24451C15.8826 4.09413 14.9489 4.24842 14.1363 4.68338C13.3236 5.11834 12.6774 5.80961 12.2981 6.64972C11.9188 7.48983 11.8277 8.43171 12.039 9.32893C10.3761 9.24558 8.74933 8.81345 7.26429 8.06059C5.77924 7.30773 4.46913 6.25097 3.419 4.95893C3.04729 5.59738 2.85196 6.32315 2.853 7.06193C2.853 8.51193 3.591 9.79293 4.713 10.5429C4.04901 10.522 3.39963 10.3427 2.819 10.0199V10.0719C2.8192 11.0376 3.15337 11.9735 3.76485 12.721C4.37633 13.4684 5.22748 13.9814 6.174 14.1729C5.55761 14.34 4.91131 14.3646 4.284 14.2449C4.55087 15.0762 5.07101 15.8031 5.77159 16.324C6.47218 16.8449 7.31813 17.1337 8.191 17.1499C7.32348 17.8313 6.33018 18.3349 5.26788 18.6321C4.20558 18.9293 3.09513 19.0142 2 18.8819C3.9117 20.1114 6.1371 20.764 8.41 20.7619C16.103 20.7619 20.31 14.3889 20.31 8.86193C20.31 8.68193 20.305 8.49993 20.297 8.32193C21.1159 7.73009 21.8226 6.99695 22.384 6.15693L22.383 6.15593Z"
+                                    fill="#607B96" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_2802_785">
+                                    <rect width="24" height="24" fill="white" transform="translate(0 0.5)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </li>
+                    <li class="col-span-1 px-3 border border-secondary-navy py-3 ">
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="Frame" clip-path="url(#clip0_2802_775)">
+                                <path id="Vector"
+                                    d="M12.9771 2.27808C7.45205 2.27808 2.97705 6.75308 2.97705 12.2781C2.97592 14.3774 3.63587 16.4237 4.86327 18.1268C6.09067 19.8298 7.8232 21.1031 9.81505 21.7661C10.3151 21.8531 10.5021 21.5531 10.5021 21.2901C10.5021 21.0531 10.4891 20.2661 10.4891 19.4281C7.97705 19.8911 7.32705 18.8161 7.12705 18.2531C7.01405 17.9651 6.52705 17.0781 6.10205 16.8401C5.75205 16.6531 5.25205 16.1901 6.08905 16.1781C6.87705 16.1651 7.43905 16.9031 7.62705 17.2031C8.52705 18.7151 9.96505 18.2901 10.5391 18.0281C10.6271 17.3781 10.8891 16.9411 11.1771 16.6911C8.95205 16.4411 6.62705 15.5781 6.62705 11.7531C6.62705 10.6651 7.01405 9.76608 7.65205 9.06508C7.55205 8.81508 7.20205 7.79008 7.75205 6.41508C7.75205 6.41508 8.58905 6.15308 10.5021 7.44108C11.3161 7.21514 12.1572 7.10142 13.0021 7.10308C13.8521 7.10308 14.7021 7.21508 15.5021 7.44008C17.4141 6.14008 18.2521 6.41608 18.2521 6.41608C18.8021 7.79108 18.4521 8.81608 18.3521 9.06608C18.9891 9.76608 19.3771 10.6531 19.3771 11.7531C19.3771 15.5911 17.0401 16.4411 14.8151 16.6911C15.1771 17.0031 15.4901 17.6031 15.4901 18.5411C15.4901 19.8781 15.4771 20.9531 15.4771 21.2911C15.4771 21.5531 15.6651 21.8651 16.1651 21.7651C18.1501 21.0949 19.875 19.8191 21.097 18.1172C22.3189 16.4154 22.9765 14.3732 22.9771 12.2781C22.9771 6.75308 18.5021 2.27808 12.9771 2.27808Z"
+                                    fill="#607B96" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_2802_775">
+                                    <rect width="24" height="24" fill="white"
+                                        transform="translate(0.977051 0.278076)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </li>
+                    <li class="col-span-1 px-3 border border-secondary-navy py-3 ">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="Frame" clip-path="url(#clip0_2802_785)">
+                                <path id="Vector"
+                                    d="M22.383 6.15593C21.6196 6.49362 20.81 6.7154 19.981 6.81393C20.8548 6.29136 21.5087 5.46894 21.821 4.49993C21.001 4.98793 20.102 5.32993 19.165 5.51493C18.5356 4.84151 17.7014 4.39489 16.792 4.24451C15.8826 4.09413 14.9489 4.24842 14.1363 4.68338C13.3236 5.11834 12.6774 5.80961 12.2981 6.64972C11.9188 7.48983 11.8277 8.43171 12.039 9.32893C10.3761 9.24558 8.74933 8.81345 7.26429 8.06059C5.77924 7.30773 4.46913 6.25097 3.419 4.95893C3.04729 5.59738 2.85196 6.32315 2.853 7.06193C2.853 8.51193 3.591 9.79293 4.713 10.5429C4.04901 10.522 3.39963 10.3427 2.819 10.0199V10.0719C2.8192 11.0376 3.15337 11.9735 3.76485 12.721C4.37633 13.4684 5.22748 13.9814 6.174 14.1729C5.55761 14.34 4.91131 14.3646 4.284 14.2449C4.55087 15.0762 5.07101 15.8031 5.77159 16.324C6.47218 16.8449 7.31813 17.1337 8.191 17.1499C7.32348 17.8313 6.33018 18.3349 5.26788 18.6321C4.20558 18.9293 3.09513 19.0142 2 18.8819C3.9117 20.1114 6.1371 20.764 8.41 20.7619C16.103 20.7619 20.31 14.3889 20.31 8.86193C20.31 8.68193 20.305 8.49993 20.297 8.32193C21.1159 7.73009 21.8226 6.99695 22.384 6.15693L22.383 6.15593Z"
+                                    fill="#607B96" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_2802_785">
+                                    <rect width="24" height="24" fill="white" transform="translate(0 0.5)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <section
+        class="mx-auto lg:w-[70%] h-[90vh] rounded-b-xl  flex flex-col justify-around relative  border border-secondary-navy lg:border-0  flex-1">
+        <div class="svg-wrapper w-full lg:w-[40%]  absolute top-[10%]   lg:right-[10%] ">
+
+            <div class=" w-60 h-60 lg:w-80 lg:h-80  bg-main-green  opacity-40 blur-[170px]"
+                style=" transform: rotate(13.51deg); transform-origin: 0 0;   box-shadow: 174px 174px 174px;">
+            </div>
+            <div class=" w-60 h-60 lg:w-80 lg:h-80 bg-primary-purple opacity-40 blur-[170px] mt-[14rem]  lg:mt-48 ml-auto"
+                style=" transform: rotate(-94.30deg); transform-origin: 0 0;  box-shadow: 174px 174px 174px; ">
             </div>
         </div>
-    </main>
+
+        <div class="flex flex-col  font-normal gap-2 mt-20 ml-8 lg:ml-0   lg:mt-[30vh]">
+            <span class="text-lg text-secondary-white">Hi all. I am</span>
+            <span class="text-6xl text-secondary-white">Name Family</span>
+            <span class="text-lg text-main-green lg:text-primary-purple "> > Front-end developer</span>
+        </div>
+        <div class="flex flex-col font-normal gap-2 ml-8  lg:mt-12">
+            <span class="text-sm text-secondary-purple">// find my profile on Github:</span>
+            <p class="text-sm text-secondary-white mt-2">
+                <span class="text-primary-purple">const</span> <span class="text-main-green">githubLink</span> =
+                <a class="text-main-pink" href="#">"https://github.com/example/url"</a>
+            </p>
+        </div>
+    </section>
+
 
     <!-- alphine js -->
     <script src="//unpkg.com/alpinejs" defer></script>
+    <!-- custom js -->
+    <script src="./src/scripts/main.js"></script>
 </body>
+
 </html>

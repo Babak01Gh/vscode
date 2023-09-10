@@ -3,16 +3,22 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-    :root {
-      --primary-white: #ffffff;
-      --secondary-white: #E5E9F0;
-      --back-black: #010C15;
-      --primary-navy: #011627; 
-      --secondary-navy: #1E2D3D;
-      --primary-purple: #4D5BCE;
-      --secondary-purple: #607B96;
-      --main-pink: #E99287;
-      --main-green: #43D9AD;
-    }
-  }
+
+/* Hamburger Menu */
+
+.open {
+  transform: rotate(90deg);
+  margin-top: 0;
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
